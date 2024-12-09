@@ -1,4 +1,4 @@
-/****************** Taking Employee Details ********************/
+import java.util.Scanner;
 class EmployDetail {
     String name, father_name, email, position, employ_id, employ_salary, employ_contact;
 
