@@ -1,4 +1,6 @@
-/****************** Remove Employee Details ********************/
+//import
+
+import java.io.File;
 
 class Employee_Remove {
     public void removeFile(String id) {
