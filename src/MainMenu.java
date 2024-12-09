@@ -1,4 +1,3 @@
-/****************** MENU OF EMS ********************/
 class MainMenu {
     public void menu() {
         System.out.println("\t\t*******************************************");
