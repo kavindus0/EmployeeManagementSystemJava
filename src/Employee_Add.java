@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.util.Scanner;
+
 /****************** Add Employee Details ********************/
 class Employee_Add {
     public void createFile() {
