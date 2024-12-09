@@ -13,7 +13,7 @@ class Employee_Add {
             File f1 = new File("employee" + emp.employ_id + ".html");
             if (f1.createNewFile()) {
                 FileWriter writer = new FileWriter(f1);
-                writer.write("<html><head><title>Employee Details</title></head><body>");
+                writer.write("<html><head><title>Employee Details</title><link rel="stylesheet" type="text/css" href="style.css"></head><body>");
                 writer.write("<h1>Employee Details</h1>");
                 writer.write("<p><strong>Employee ID:</strong> " + emp.employ_id + "</p>");
                 writer.write("<p><strong>Name:</strong> " + emp.name + "</p>");
