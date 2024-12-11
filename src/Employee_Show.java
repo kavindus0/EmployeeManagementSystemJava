@@ -6,6 +6,8 @@ class Employee_Show {
     public void viewFile(String id) throws Exception {
         File file = new File("employee" + id + ".html");
         if (file.exists()) {
+            ///
+//                file code from test
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 System.out.println(sc.nextLine());
