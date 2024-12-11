@@ -15,3 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         container.style.transform = "scale(1)";
     });
 });
+setTimeout(() => {
+    window.location.reload();
+}, 5000);
