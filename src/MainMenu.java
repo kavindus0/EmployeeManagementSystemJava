@@ -13,8 +13,8 @@ class MainMenu {
                 "8 8888          ,8'       `8        `8.`8888. `8b.  ;8.`8888\n" +
                 "8 888888888888 ,8'         `         `8.`8888. `Y8888P ,88P'");
 
-        System.out.println("===========================================================================================");
-        System.out.println("                          Welcome to Employee Management System                            ");
+        System.out.println("\n\n==================================================================");
+        System.out.println("              Welcome to Employee Management System                   ");
         System.out.println("\nPress 1 : To Add an Employee Details");
         System.out.println("Press 2 : To See an Employee Details");
         System.out.println("Press 3 : To Remove an Employee");
