@@ -15,7 +15,7 @@ A simple **Employee Management System** built with HTML, CSS, JavaScript, and Ja
 
 ## Project Structure
 
-Employee-Management-System/
+Employee-Management-System
 ├── index.html           # Generated HTML file with employee details
 ├── styles.css           # CSS file for styling
 ├── script.js            # JavaScript file for animations and auto-refresh
