@@ -1,41 +1,74 @@
-/* General Styles */
+/* General Reset */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
     margin: 0;
-    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-h1 {
+/* Container styling */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    animation: slide-in 1s ease-out;
+}
+
+/* Title */
+.title {
+    font-size: 2rem;
+    color: #444;
     text-align: center;
-    color: #2c3e50;
-    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 1.1em;
+/* Details styling */
+.details p {
+    font-size: 1rem;
+    line-height: 1.6;
     margin: 10px 0;
-    animation: slideIn 1s ease-out;
 }
 
-/* Animation Definitions */
-@keyframes fadeIn {
+.details strong {
+    color: #222;
+}
+
+.details span {
+    color: #555;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
     from {
         opacity: 0;
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes slideIn {
+.fade-in {
+    display: inline-block;
+    animation: fade-in 1s ease-out forwards;
+}
+
+/* Slide-in animation for container */
+@keyframes slide-in {
     from {
-        transform: translateX(-100%);
+        transform: translateY(50px);
         opacity: 0;
     }
     to {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
