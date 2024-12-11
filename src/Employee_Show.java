@@ -15,7 +15,11 @@ class Employee_Show {
         File file = new File("employee" + id + ".html");
 
         if (file.exists()) {
-            Desktop.getDesktop().open(file);
+            while (true) {
+                Desktop.getDesktop().open(file);
+                System.out.printf("Employee with ID: %s shown successfully%n", id);
+                break;
+            }
 
                          //file code from test
 //            Scanner sc = new Scanner(file);
