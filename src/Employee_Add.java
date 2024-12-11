@@ -11,17 +11,27 @@ class Employee_Add {
         try {
             File f1 = new File("employee" + emp.employ_id + ".html");
             if (f1.createNewFile()) {
-                FileWriter writer = new FileWriter(f1);
-                writer.write("<html><head><title>Employee Details</title><link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\"></head><body>");
-                writer.write("<h1>Employee Details</h1>");
-                writer.write("<p><strong>Employee ID:</strong> " + emp.employ_id + "</p>");
-                writer.write("<p><strong>Name:</strong> " + emp.name + "</p>");
-                writer.write("<p><strong>Father's Name:</strong> " + emp.father_name + "</p>");
-                writer.write("<p><strong>Contact:</strong> " + emp.employ_contact + "</p>");
-                writer.write("<p><strong>Email:</strong> " + emp.email + "</p>");
-                writer.write("<p><strong>Position:</strong> " + emp.position + "</p>");
-                writer.write("<p><strong>Salary:</strong> " + emp.employ_salary + "</p>");
-                writer.write("</body></html>");
+                FileWriter writer = new FileWriter(f1);writer.write("<html>");
+writer.write("<head>");
+writer.write("<title>Employee Details</title>");
+writer.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">");
+writer.write("</head>");
+writer.write("<body>");
+writer.write("<div class=\"container\">");
+writer.write("<h1 class=\"title\">Employee Details</h1>");
+writer.write("<div class=\"details\">");
+writer.write("<p><strong>Employee ID:</strong> <span class=\"fade-in\">" + emp.employ_id + "</span></p>");
+writer.write("<p><strong>Name:</strong> <span class=\"fade-in\">" + emp.name + "</span></p>");
+writer.write("<p><strong>Father's Name:</strong> <span class=\"fade-in\">" + emp.father_name + "</span></p>");
+writer.write("<p><strong>Contact:</strong> <span class=\"fade-in\">" + emp.employ_contact + "</span></p>");
+writer.write("<p><strong>Email:</strong> <span class=\"fade-in\">" + emp.email + "</span></p>");
+writer.write("<p><strong>Position:</strong> <span class=\"fade-in\">" + emp.position + "</span></p>");
+writer.write("<p><strong>Salary:</strong> <span class=\"fade-in\">" + emp.employ_salary + "</span></p>");
+writer.write("</div>");
+writer.write("</div>");
+writer.write("<script src=\"script.js\"></script>");
+writer.write("</body>");
+writer.write("</html>");
                 writer.close();
                 System.out.println("\nEmployee has been added successfully!");
             } else {
