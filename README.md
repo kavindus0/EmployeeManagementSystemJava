@@ -97,7 +97,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 
 Author: Kavindu
-Email: kavindusachinthe@outlook.com 
+Email: kavindusachinthe@outlook.com <br>
 GitHub: @kavindus0
 
 Enjoy coding and contributing!
