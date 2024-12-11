@@ -8,9 +8,9 @@ class EmployManagementSystem {
         MainMenu menu = new MainMenu();
         Employee_Show viewer = new Employee_Show();
         menu.menu();
-
         int choice = 0;
         while (choice != 5) {
+            StaticsArt.SelectList();
             System.out.print("\nEnter your choice: ");
             choice = Integer.parseInt(sc.nextLine());
 
