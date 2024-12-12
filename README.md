@@ -15,20 +15,24 @@ A simple **Employee Management System** built with HTML, CSS, JavaScript, and Ja
 
 ## Project Structure
 
-Employee-Management-System<br>
-├── index.html           # Generated HTML file with employee details <br>
-├── styles.css           # CSS file for styling<br>
-├── script.js            # JavaScript file for animations and auto-refresh<br>
-├── EmployeeDetails.java # Java code to generate the HTML dynamically<br>
-├── README.md            # Project documentation<br>
+Employee-Management-System
+<br>
+├── index.html           		 
+├── styles.css           		
+├── script.js            		
+├── EmployeeDetails.java 		
+├── README.md
+<br>
 
 ---
 
 ## Usage
 
 ### 1. Clone the Repository
-git clone https://github.com/your-username/employee-management-system.git
-cd employee-management-system
+
+	git clone https://github.com/your-username/employee-management-system.git
+
+	cd employee-management-system
 
 ### 2. Compile and Run the Java Program
 
