@@ -14,15 +14,12 @@ class Employee_Show {
     public void viewFile(String id) throws Exception {
         File file = new File("employee" + id + ".html");
 
-        if (file.exists()) {
-            while (true) {
-                Desktop.getDesktop().open(file);
-                System.out.printf("Employee with ID: %s shown successfully%n", id);
-                break;
-            }
-
-
-        } else {
+        if (file.exists()) while (true) {
+            Desktop.getDesktop().open(file);
+            System.out.printf("Employee with ID: %s shown successfully%n", id);
+            break;
+        }
+        else {
             System.out.println("Employee record not found.");
         }
     }
