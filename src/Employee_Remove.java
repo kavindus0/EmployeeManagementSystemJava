@@ -1,5 +1,3 @@
-//import
-
 import java.io.File;
 
 class Employee_Remove {
