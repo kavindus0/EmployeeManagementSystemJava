@@ -32,15 +32,15 @@ cd employee-management-system
 
 ### 2. Compile and Run the Java Program
 
-	•	Ensure you have Java installed on your system.
-	•	Compile the Java file:
+•	Ensure you have Java installed on your system.
 
-javac EmployeeDetails.java
+•	Compile the Java file:
 
+	javac EmployeeDetails.java
 
-	•	Run the program to generate index.html:
+•	Run the program to generate index.html:
 
-java EmployeeDetails
+	java EmployeeDetails
 
 
 
@@ -52,17 +52,19 @@ Open the generated index.html file in your browser to view the employee details.
 
 Auto-Refresh
 
-	•	The page auto-refreshes every 5 seconds to reflect the latest employee data.
+•	The page auto-refreshes every 5 seconds to reflect the latest employee data.
 
 CSS Styling
 
-	•	Modern design with a responsive layout for both desktop and mobile.
-	•	Smooth animations enhance the overall user experience.
+•	Modern design with a responsive layout for both desktop and mobile.
+
+•	Smooth animations enhance the overall user experience.
 
 JavaScript Animations
 
-	•	Fade-in effect: Employee details load with smooth animations.
-	•	Hover effect: Interactive elements respond dynamically to user interactions.
+•	Fade-in effect: Employee details load with smooth animations.
+
+•	Hover effect: Interactive elements respond dynamically to user interactions.
 
 ## Dependencies
 
@@ -72,32 +74,33 @@ JavaScript Animations
 ## Contribution
 
 Contributions are welcome! Here’s how you can contribute:
-	1.	Fork the repository.
-	2.	Create a feature branch:
+1.	Fork the repository.
+	
+2.	Create a feature branch:
 
-git checkout -b feature-name
-
-
-	3.	Make your changes and commit them:
-
-git commit -m "Description of changes"
+	git checkout -b feature-name
 
 
-	4.	Push your branch:
+3.	Make your changes and commit them:
 
-git push origin feature-name
+	git commit -m "Description of changes"
 
 
-	5.	Open a Pull Request.
+4.	Push your branch:
 
-License
+	git push origin feature-name
+
+
+5.	Open a Pull Request.
+
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contact
+## Contact
 
 Author: Kavindu
 Email: kavindusachinthe@outlook.com <br>
 GitHub: @kavindus0
 
-Enjoy coding and contributing!
+## Enjoy coding and contributing!
