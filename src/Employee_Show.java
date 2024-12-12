@@ -3,11 +3,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-/****************** Show Employee Details ********************/
 class Employee_Show {
 
     private static void openDirectory(File file) throws IOException {
-      //  File directory = new File("/Users/kavindus/Projects/Sem02/JavaSem02/style.css");
         Desktop.getDesktop().open(file);
     }
 
