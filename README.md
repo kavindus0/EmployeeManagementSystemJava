@@ -8,7 +8,9 @@ A simple **Employee Management System** built with HTML, CSS, JavaScript, and Ja
 ## Features
 
 - **Dynamic Employee Details**: Generates employee details dynamically through Java and outputs as an HTML file.
+
 - **Modern Design**: Uses CSS for a visually appealing layout and animations.
+
 - **Interactive UI**: Includes JavaScript animations and auto-refresh functionality to update data dynamically.
 
 ---
