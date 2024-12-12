@@ -21,11 +21,7 @@ class Employee_Show {
                 break;
             }
 
-                         //file code from test
-//            Scanner sc = new Scanner(file);
-//            while (sc.hasNextLine()) {
-//                System.out.println(sc.nextLine());
-//            }
+
         } else {
             System.out.println("Employee record not found.");
         }
