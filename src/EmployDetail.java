@@ -1,6 +1,6 @@
 import java.util.Scanner;
 class EmployDetail {
-    String name, father_name, email, position, employ_id;
+            String name, father_name, email, position, employ_id;
             double employ_salary;
             int employ_contact;
 
