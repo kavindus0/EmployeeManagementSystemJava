@@ -1,6 +1,8 @@
 import java.util.Scanner;
 class EmployDetail {
-    String name, father_name, email, position, employ_id, employ_salary, employ_contact;
+    String name, father_name, email, position, employ_id;
+            double employ_salary;
+            int employ_contact;
 
     public void getInfo() {
         Scanner sc = new Scanner(System.in);
@@ -15,8 +17,8 @@ class EmployDetail {
         System.out.print("Enter Employee's Position ----: ");
         position = sc.nextLine();
         System.out.print("Enter Employee's Contact Info : ");
-        employ_contact = sc.nextLine();
+        employ_contact = sc.nextInt();
         System.out.print("Enter Employee's Salary ------: ");
-        employ_salary = sc.nextLine();
+        employ_salary = sc.nextDouble();
     }
 }
