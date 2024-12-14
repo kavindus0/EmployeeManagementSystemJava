@@ -8,17 +8,17 @@ class EmployDetail {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Employee's Name --------: ");
         name = sc.nextLine();
-        System.out.print("Enter Employee's Father Name -: ");
+        System.out.print("Enter "+name+"'s Father Name -: ");
         father_name = sc.nextLine();
-        System.out.print("Enter Employee's ID ----------: ");
+        System.out.print("Enter "+name+"'s ID ----------: ");
         employ_id = sc.nextLine();
-        System.out.print("Enter Employee's Email ID ----: ");
+        System.out.print("Enter "+name+"'s Email ID ----: ");
         email = sc.nextLine();
-        System.out.print("Enter Employee's Position ----: ");
+        System.out.print("Enter "+name+"'s Position ----: ");
         position = sc.nextLine();
-        System.out.print("Enter Employee's Contact Info : ");
+        System.out.print("Enter "+name+"'s Contact Info : ");
         employ_contact = sc.nextInt();
-        System.out.print("Enter Employee's Salary ------: ");
+        System.out.print("Enter "+name+"'s Salary ------: ");
         employ_salary = sc.nextDouble();
     }
 }
