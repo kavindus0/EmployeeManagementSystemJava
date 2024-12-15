@@ -13,8 +13,10 @@ class Employee_Show {
         File file = new File("employee" + id + ".html");
 
         if (file.exists()) while (true) {
-            Desktop.getDesktop().open(file);
-            System.out.printf("Employee with ID: %s shown successfully%n", id);
+            try {
+                Desktop.getDesktop().open(file);
+                System.out.printf("Employee with ID: %s shown successfully%n", id);
+            } catch (Exception e) {}
             break;
         }
         else {
