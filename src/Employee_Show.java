@@ -10,7 +10,7 @@ class Employee_Show {
     }
 
     public void viewFile(String id) throws Exception {
-        File file = new File("employee" + id + ".html");
+        File file = new File("./userdata/employee" + id + ".html");
 
         if (file.exists()) while (true) {
             try {
