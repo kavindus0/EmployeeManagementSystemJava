@@ -9,12 +9,12 @@ class Employee_Add {
         emp.getInfo();
 
         try {
-            File f1 = new File("employee" + emp.employ_id + ".html");
+            File f1 = new File("./userdata/employee" + emp.employ_id + ".html");
             if (f1.createNewFile()) {
                 FileWriter writer = new FileWriter(f1);writer.write("<html>");
                 writer.write("<head>");
                 writer.write("<title>Employee Details</title>");
-                writer.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"./asset/style.css\">");
+                writer.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"../asset/style.css\">");
                 writer.write("</head>");
                 writer.write("<body>");
                 writer.write("<div class=\"container\">");
@@ -29,7 +29,7 @@ class Employee_Add {
                 writer.write("<p><strong>Salary:</strong> <span class=\"fade-in\">" + emp.employ_salary + "</span></p>");
                 writer.write("</div>");
                 writer.write("</div>");
-                writer.write("<script src=\"./asset/script.js\"></script>");
+                writer.write("<script src=\"../asset/script.js\"></script>");
                 writer.write("</body>");
                 writer.write("</html>");
                 writer.close();
