@@ -18,7 +18,14 @@ class EmployDetail {
         position = sc.nextLine();
         System.out.print("Enter "+name+"'s Contact Info : ");
         employ_contact = sc.nextInt();
-        System.out.print("Enter "+name+"'s Salary ------: ");
-        employ_salary = sc.nextDouble();
+        while (true){
+        try {
+            System.out.print("Enter "+name+"'s Salary ------: ");
+            employ_salary = sc.nextDouble();
+            break;
+        }catch (Exception e) {
+
+            System.out.println("Invalid Employee Details");
+        }}
     }
 }
