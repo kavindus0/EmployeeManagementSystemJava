@@ -52,12 +52,12 @@ class EmployDetail {
         while (true) {
             try {
                 employ_contact = Integer.parseInt(sc.nextLine().trim());
-                if (String.valueOf(employ_contact).length() != 10) {
-                    throw new IllegalArgumentException("Contact number must be 10 digits.");
+                if (String.valueOf(employ_contact).length() != 9) {
+                    throw new IllegalArgumentException("Contact number format is 712345678.");
                 }
                 break;
             } catch (Exception e) {
-                System.out.print("Invalid contact number. Enter a valid Contact Info : ");
+                System.out.print("Invalid contact number. Enter a valid Contact Info, Format is 712345678 : ");
             }
         }
 
