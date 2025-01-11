@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 class EmployManagementSystem {
     public static void main(String[] args) {
+        EmployeeDataView viewerData = new EmployeeDataView();
         Scanner sc = new Scanner(System.in);
         MainMenu menu = new MainMenu();
         Employee_Show viewer = new Employee_Show();
@@ -18,6 +19,7 @@ class EmployManagementSystem {
                     break;
 
                 case 2:
+                    viewerData.listUserdataFiles();
                     System.out.print("\nEnter Employee ID to view: ");
                     String viewId = sc.nextLine();
                     try {
