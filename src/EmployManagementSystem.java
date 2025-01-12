@@ -31,12 +31,14 @@ class EmployManagementSystem {
 
                 case 3:
                     System.out.print("\nEnter Employee ID to remove: ");
+                    viewerData.listUserdataFiles();
                     String removeId = sc.nextLine();
                     new Employee_Remove().removeFile(removeId);
                     break;
 
                 case 4:
                     System.out.print("\nEnter Employee ID to update: ");
+                    viewerData.listUserdataFiles();
                     String updateId = sc.nextLine();
                     System.out.print("Enter old data to update: ");
                     String oldData = sc.nextLine();
