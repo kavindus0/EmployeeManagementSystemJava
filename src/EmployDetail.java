@@ -76,8 +76,8 @@ class EmployDetail {
         System.out.print("Enter " + name + "'s Salary ------: ");
         while (true) {
             try {
-                employ_salary = Double.parseDouble(sc.nextLine().trim());
-                if (employ_salary <= 0) {
+                setEmploy_salary(Double.parseDouble(sc.nextLine().trim()));
+                if (getEmploy_salary() <= 0) {
                     throw new IllegalArgumentException("Salary must be greater than zero.");
                 }
                 break;
