@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class EmployDetail {
     String name, father_name, email, position, employ_id;
-    private double employ_salary;
+    double employ_salary;
     int employ_contact;
 
     public void getInfo() {
