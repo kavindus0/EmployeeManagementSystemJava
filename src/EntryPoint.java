@@ -11,9 +11,15 @@ public class EntryPoint {
             System.out.println("2. Login");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // consume the newline
 
+            int choice = 0;
+            try {
+                choice = scanner.nextInt();
+                scanner.nextLine();
+            } catch (Exception e) {
+                System.out.println("Invalid choice");
+                choice = 3;
+            }
             switch (choice) {
                 case 1:
                     register(scanner);
