@@ -8,6 +8,13 @@ class EmployDetail {
     private double employ_salary;
     int employ_contact;
 
+    double getEmploy_salary(){
+        return employ_salary;
+    }
+    void setEmploy_salary(double employ_salary){
+        this.employ_salary = employ_salary;
+    }
+
     public void getInfo() {
         Scanner sc = new Scanner(System.in);
 
