@@ -26,7 +26,7 @@ class Employee_Add {
                 writer.write("<p><strong>Contact:</strong> <span class=\"fade-in\">" + emp.employ_contact + "</span></p>");
                 writer.write("<p><strong>Email:</strong> <span class=\"fade-in\">" + emp.email + "</span></p>");
                 writer.write("<p><strong>Position:</strong> <span class=\"fade-in\">" + emp.position + "</span></p>");
-                writer.write("<p><strong>Salary:</strong> <span class=\"fade-in\">" + emp.employ_salary + "</span></p>");
+                writer.write("<p><strong>Salary:</strong> <span class=\"fade-in\">" + emp.getEmploy_salary() + "</span></p>");
                 writer.write("</div>");
                 writer.write("</div>");
                 writer.write("<script src=\"../asset/script.js\"></script>");
