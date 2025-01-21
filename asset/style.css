@@ -11,6 +11,27 @@ body {
     overflow: hidden;
 }
 
+.button-3d {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 5px #2d6a31;
+    transition: all 0.1s ease-in-out;
+}
+
+.button-3d:active {
+    box-shadow: 0 2px #2d6a31;
+    transform: translateY(3px);
+}
+
 /* Container styling */
 .container {
     background: #fff;
@@ -34,6 +55,44 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin: 10px 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.table {
+    width: 70%;
+    border-collapse: collapse;
+    perspective: 1000px; /* Enables 3D space */
+    transform-style: preserve-3d;
+    animation: rotateTable 10s infinite linear;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+@keyframes rotateTable {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 .details strong {
