@@ -8,6 +8,10 @@ class EmployDetail {
     private double employ_salary;
    private int employ_contact;
 
+    public EmployDetail(String employ_id, double employ_salary) {
+        this.employ_id = employ_id;
+        this.employ_salary = employ_salary;
+    }
 
     public EmployDetail(String email, int employ_contact, String employ_id, double employ_salary, String father_name, String name, String position) {
         this.email = email;
@@ -23,6 +27,10 @@ class EmployDetail {
 
     }
 
+
+   public double getSalary() {
+        return employ_salary;
+    }
     public String getEmail() {
         return email;
     }
