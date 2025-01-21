@@ -9,7 +9,7 @@ class Employee_Add {
         emp.getInfo();
 
         try {
-            File f1 = new File("./userdata/employee" + emp.employ_id + ".html");
+            File f1 = new File("./userdata/employee" + emp.getEmploy_id() + ".html");
             if (f1.createNewFile()) {
                 FileWriter writer = new FileWriter(f1);writer.write("<html>");
                 writer.write("<head>");
@@ -20,12 +20,12 @@ class Employee_Add {
                 writer.write("<div class=\"container\">");
                 writer.write("<h1 class=\"title\">Employee Details</h1>");
                 writer.write("<div class=\"details\">");
-                writer.write("<p><strong>Employee ID:</strong> <span class=\"fade-in\">" + emp.employ_id + "</span></p>");
-                writer.write("<p><strong>Name:</strong> <span class=\"fade-in\">" + emp.name + "</span></p>");
-                writer.write("<p><strong>Father's Name:</strong> <span class=\"fade-in\">" + emp.father_name + "</span></p>");
-                writer.write("<p><strong>Contact:</strong> <span class=\"fade-in\">" + emp.employ_contact + "</span></p>");
-                writer.write("<p><strong>Email:</strong> <span class=\"fade-in\">" + emp.email + "</span></p>");
-                writer.write("<p><strong>Position:</strong> <span class=\"fade-in\">" + emp.position + "</span></p>");
+                writer.write("<p><strong>Employee ID:</strong> <span class=\"fade-in\">" + emp.getEmploy_id() + "</span></p>");
+                writer.write("<p><strong>Name:</strong> <span class=\"fade-in\">" + emp.getName() + "</span></p>");
+                writer.write("<p><strong>Father's Name:</strong> <span class=\"fade-in\">" + emp.getFather_name() + "</span></p>");
+                writer.write("<p><strong>Contact:</strong> <span class=\"fade-in\">" + emp.getEmploy_contact() + "</span></p>");
+                writer.write("<p><strong>Email:</strong> <span class=\"fade-in\">" + emp.getEmail() + "</span></p>");
+                writer.write("<p><strong>Position:</strong> <span class=\"fade-in\">" + emp.getPosition() + "</span></p>");
                 writer.write("<p><strong>Salary:</strong> <span class=\"fade-in\">" + emp.getEmploy_salary() + "</span></p>");
                 writer.write("</div>");
                 writer.write("</div>");
