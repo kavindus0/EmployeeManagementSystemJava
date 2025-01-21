@@ -8,52 +8,51 @@ class EmployDetail {
     private double employ_salary;
    private int employ_contact;
 
-    public String getEmail() {
-        return email;
+    public EmployDetail(String employ_id, double employ_salary) {
+        this.employ_id = employ_id;
+        this.employ_salary = employ_salary;
     }
 
-    public void setEmail(String email) {
+    public EmployDetail(String email, int employ_contact, String employ_id, double employ_salary, String father_name, String name, String position) {
         this.email = email;
+        this.employ_contact = employ_contact;
+        this.employ_id = employ_id;
+        this.employ_salary = employ_salary;
+        this.father_name = father_name;
+        this.name = name;
+        this.position = position;
+    }
+
+    public EmployDetail() {
+
+    }
+
+
+   public double getSalary() {
+        return employ_salary;
+    }
+    public String getEmail() {
+        return email;
     }
 
     public int getEmploy_contact() {
         return employ_contact;
     }
 
-    public void setEmploy_contact(int employ_contact) {
-        this.employ_contact = employ_contact;
-    }
-
     public String getEmploy_id() {
         return employ_id;
-    }
-
-    public void setEmploy_id(String employ_id) {
-        this.employ_id = employ_id;
     }
 
     public String getFather_name() {
         return father_name;
     }
 
-    public void setFather_name(String father_name) {
-        this.father_name = father_name;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getPosition() {
         return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
     }
 
     double getEmploy_salary(){

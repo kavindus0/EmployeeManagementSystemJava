@@ -1,66 +1,49 @@
-import java.io.*;
 import java.util.Scanner;
 
-public class EntryPoint {
-    private static final String FILE_NAME = "user_data.txt";
+public static void main() {
+    Scanner scanner = new Scanner(System.in);
+    while (true) {
+        System.out.println("1. Register");
+        System.out.println("2. Login");
+        System.out.println("3. Exit");
+        System.out.print("Enter your choice: ");
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("1. Register");
-            System.out.println("2. Login");
-            System.out.println("3. Exit");
-            System.out.print("Enter your choice: ");
-
-            int choice = 0;
-            try {
-                choice = scanner.nextInt();
-                scanner.nextLine();
-            } catch (Exception e) {
-                System.out.println("Invalid choice");
-                choice = 3;
-            }
-            switch (choice) {
-                case 1:
-                    register(scanner);
-                    break;
-                case 2:
-                    login(scanner);
-                    break;
-                case 3:
-                    System.out.println("Exiting...");
-                    scanner.close();
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-            }
+        int choice;
+        try {
+            choice = scanner.nextInt();
+            scanner.nextLine();
+        } catch (Exception e) {
+            System.out.println("Invalid choice");
+            choice = 3;
+        }
+        switch (choice) {
+            case 1:
+                Login.register(scanner);
+                break;
+            case 2:
+                login(scanner);
+                break;
+            case 3:
+                System.out.println("Exiting...");
+                scanner.close();
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
         }
     }
+}
 
-    private static void register(Scanner scanner) {
-        System.out.print("Enter username: ");
-        String username = scanner.nextLine();
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
 
-        if (isUserExists(username)) {
-            System.out.println("Username already exists. Please try a different username.");
-        } else {
-            saveUser(username, password);
-            System.out.println("Registration successful!");
-        }
-    }
+private static void login(Scanner scanner) {
+    System.out.print("Enter username: ");
+    String username = scanner.nextLine();
+    System.out.print("Enter password: ");
+    String password = scanner.nextLine();
 
-    private static void login(Scanner scanner) {
-        System.out.print("Enter username: ");
-        String username = scanner.nextLine();
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
+    if (Login.authenticateUser(username, password)) {
+        System.out.println("Login successful!");
 
-        if (authenticateUser(username, password)) {
-            System.out.println("Login successful!");
-            
         EmployeeDataView viewerData = new EmployeeDataView();
         Scanner sc = new Scanner(System.in);
         MainMenu menu = new MainMenu();
@@ -115,47 +98,11 @@ public class EntryPoint {
             }
         }
 
-        } else {
-            System.out.println("Invalid username or password!");
-        }
-    }
-
-    private static boolean isUserExists(String username) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts[0].equals(username)) {
-                    return true;
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading user data: " + e.getMessage());
-        }
-        return false;
-    }
-
-    private static boolean authenticateUser(String username, String password) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts[0].equals(username) && parts[1].equals(password)) {
-                    return true;
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading user data: " + e.getMessage());
-        }
-        return false;
-    }
-
-    private static void saveUser(String username, String password) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
-            writer.write(username + "," + password);
-            writer.newLine();
-        } catch (IOException e) {
-            System.out.println("Error saving user data: " + e.getMessage());
-        }
+    } else {
+        System.out.println("Invalid username or password!");
     }
 }
+
+
+
+
