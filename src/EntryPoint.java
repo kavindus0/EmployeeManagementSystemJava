@@ -1,6 +1,12 @@
+import java.io.*;
 import java.util.Scanner;
 
-public static void main() {
+private static final File FILE_NAME = new File("userdata.txt");
+
+
+public static void main() throws IOException {
+
+
     Scanner scanner = new Scanner(System.in);
     while (true) {
         System.out.println("1. Register");
@@ -18,7 +24,7 @@ public static void main() {
         }
         switch (choice) {
             case 1:
-                Login.register(scanner);
+                register(scanner);
                 break;
             case 2:
                 login(scanner);
@@ -35,13 +41,13 @@ public static void main() {
 }
 
 
-private static void login(Scanner scanner) {
+private static void login(Scanner scanner) throws IOException {
     System.out.print("Enter username: ");
     String username = scanner.nextLine();
     System.out.print("Enter password: ");
     String password = scanner.nextLine();
 
-    if (Login.authenticateUser(username, password)) {
+    if (authenticateUser(username, password)) {
         System.out.println("Login successful!");
 
         EmployeeDataView viewerData = new EmployeeDataView();
@@ -102,6 +108,61 @@ private static void login(Scanner scanner) {
         System.out.println("Invalid username or password!");
     }
 }
+
+static boolean isUserExists(String username) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split(",");
+            if (parts[0].equals(username)) {
+                return true;
+            }
+        }
+    } catch (IOException e) {
+        System.out.println("Error reading user data");
+    }
+    return false;
+}
+
+
+static void register(Scanner scanner) {
+    System.out.print("Enter username: ");
+    String username = scanner.nextLine();
+    System.out.print("Enter password: ");
+    String password = scanner.nextLine();
+
+    if (isUserExists(username)) {
+        System.out.println("Username already exists. Please try a different username.");
+    } else {
+        saveUser(username, password);
+        System.out.println("Registration successful!");
+    }
+}
+
+static boolean authenticateUser(String username, String password) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split(",");
+            if (parts[0].equals(username) && parts[1].equals(password)) {
+                return true;
+            }
+        }
+    } catch (IOException e) {
+        System.out.println("Error reading user data");
+    }
+    return false;
+}
+
+static void saveUser(String username, String password) {
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
+        writer.write(username + "," + password);
+        writer.newLine();
+    } catch (IOException e) {
+        System.out.println("Error saving user data");
+    }
+}
+
 
 
 
