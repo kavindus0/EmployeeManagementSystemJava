@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 class EmployDetail {
    private String name;
@@ -62,7 +63,7 @@ class EmployDetail {
         this.employ_salary = employ_salary;
     }
 
-    public void getInfo() {
+    public void getInfo() throws IOException {
         Scanner sc = new Scanner(System.in);
 
         // Get Employee Name
@@ -132,5 +133,12 @@ class EmployDetail {
                 System.out.print("Invalid salary. Enter a valid Salary ------: ");
             }
         }
+
+
+        SalaryCalculator salaryCalculator = new SalaryCalculator();
+        SalaryCalculator.generateSalarySummary(employ_id,salaryCalculator, this.employ_salary);
+
+
+
     }
 }
