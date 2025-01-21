@@ -1,12 +1,60 @@
 import java.util.Scanner;
 class EmployDetail {
-    String name;
-    String father_name;
-    String email;
-    String position;
-    String employ_id;
+   private String name;
+   private String father_name;
+   private String email;
+   private String position;
+   private String employ_id;
     private double employ_salary;
-    int employ_contact;
+   private int employ_contact;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getEmploy_contact() {
+        return employ_contact;
+    }
+
+    public void setEmploy_contact(int employ_contact) {
+        this.employ_contact = employ_contact;
+    }
+
+    public String getEmploy_id() {
+        return employ_id;
+    }
+
+    public void setEmploy_id(String employ_id) {
+        this.employ_id = employ_id;
+    }
+
+    public String getFather_name() {
+        return father_name;
+    }
+
+    public void setFather_name(String father_name) {
+        this.father_name = father_name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
 
     double getEmploy_salary(){
         return employ_salary;
