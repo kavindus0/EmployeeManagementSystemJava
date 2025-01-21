@@ -9,7 +9,7 @@ public class EmployeeDataView {
                 for (String fileName : fileList) {
                     int startIndex = fileName.indexOf("employee") + "employee".length();
                     int endIndex = fileName.indexOf(".html");
-                    if (startIndex != -1 && endIndex != -1 && startIndex < endIndex) {
+                    if (endIndex != -1 && startIndex < endIndex) {
                         StringBuffer buffer = new StringBuffer(fileName);
                         String extractedWord = buffer.substring(startIndex, endIndex);
                         System.out.println(" - " + extractedWord);
