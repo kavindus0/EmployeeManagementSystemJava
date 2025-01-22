@@ -10,9 +10,11 @@ public class EntryPoint {
     public static void main(String[] args) {
         // Create necessary directories and files
         createDirectories();
+
         createUserDataFile();
 
         Scanner scanner = new Scanner(System.in);
+
         while (true) {
             System.out.println("1. Register");
             System.out.println("2. Login");
