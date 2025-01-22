@@ -26,7 +26,7 @@ class Employee_Update implements FileFunctions {
 
     public void updateFile(String id, String oldData, String newData) {
         try {
-            File file = new File("./userdata/employee" + id + ".html");
+            File file = new File(FileFunctions.USER_DATA_DIR+"employee" + id + ".html");
             if (!file.exists()) {
                 System.out.println("Employee record not found.");
                 return;

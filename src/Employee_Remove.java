@@ -13,7 +13,7 @@ class Employee_Remove implements FileFunctions {
     }
 
     public void removeFile(String id) {
-        File file = new File("./userdata/employee" + id + ".html");
+        File file = new File(FileFunctions.USER_DATA_DIR+"employee" + id + ".html");
         if (file.exists()) {
             if (file.delete()) {
                 System.out.println("\nEmployee has been removed successfully!");

@@ -12,7 +12,7 @@ class Employee_Add implements FileFunctions{
 
     // Create employee HTML file
     try {
-        File f1 = new File("./userdata/employee" + emp.getEmploy_id() + ".html");
+        File f1 = new File(FileFunctions.USER_DATA_DIR+"employee" + emp.getEmploy_id() + ".html");
         if (f1.createNewFile()) {
             try (FileWriter writer = new FileWriter(f1)) {
                 writer.write("<html>");
