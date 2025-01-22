@@ -2,18 +2,15 @@ import java.io.*;
 import java.util.Scanner;
 
 public class EntryPoint {
-    private static final File FILE_NAME = new File("userdata.txt");
+    private static final File USER_DATA_FILE = new File("userdata.txt");
+    private static final String USER_DATA_DIR = "./userdata/";
+    private static final String EMERGENCY_DATA_DIR = "./emergencydata/";
+    private static final String SALARY_DATA_DIR = "./salarydata/";
 
     public static void main(String[] args) {
-        // Create userdata.txt if it doesn't exist
-        if (!FILE_NAME.exists()) {
-            try {
-                FILE_NAME.createNewFile();
-            } catch (IOException e) {
-                System.out.println("Error creating userdata.txt: " + e.getMessage());
-                return;
-            }
-        }
+        // Create necessary directories and files
+        createDirectories();
+        createUserDataFile();
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -48,6 +45,32 @@ public class EntryPoint {
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+
+    private static void createDirectories() {
+        File userDataDir = new File(USER_DATA_DIR);
+        File emergencyDataDir = new File(EMERGENCY_DATA_DIR);
+        File salaryDataDir = new File(SALARY_DATA_DIR);
+
+        if (!userDataDir.exists()) {
+            userDataDir.mkdirs();
+        }
+        if (!emergencyDataDir.exists()) {
+            emergencyDataDir.mkdirs();
+        }
+        if (!salaryDataDir.exists()) {
+            salaryDataDir.mkdirs();
+        }
+    }
+
+    private static void createUserDataFile() {
+        if (!USER_DATA_FILE.exists()) {
+            try {
+                USER_DATA_FILE.createNewFile();
+            } catch (IOException e) {
+                System.out.println("Error creating userdata.txt: " + e.getMessage());
             }
         }
     }
@@ -129,7 +152,7 @@ public class EntryPoint {
     }
 
     static boolean isUserExists(String username) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(USER_DATA_FILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -158,7 +181,7 @@ public class EntryPoint {
     }
 
     static boolean authenticateUser(String username, String password) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(USER_DATA_FILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -173,7 +196,7 @@ public class EntryPoint {
     }
 
     static void saveUser(String username, String password) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(USER_DATA_FILE, true))) {
             writer.write(username + "," + password);
             writer.newLine();
         } catch (IOException e) {
