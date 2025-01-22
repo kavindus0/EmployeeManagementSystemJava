@@ -1,17 +1,26 @@
-public class User {
-    private String username;
+public class User extends Person {
+    private String name;
     private String password;
 
-    public User(String username, String password) {
-        this.username = username;
+    public User(String name, String password) {
+        super(name);
+        this.name = name;
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                "} ";
     }
 }
