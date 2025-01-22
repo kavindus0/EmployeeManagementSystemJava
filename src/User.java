@@ -3,7 +3,7 @@ public class User extends Person {
     private String password;
 
     public User(String name, String password) {
-        super(name);
+       // super(name, employContact, name, address);
         this.name = name;
         this.password = password;
     }
