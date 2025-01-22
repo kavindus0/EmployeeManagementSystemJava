@@ -103,38 +103,6 @@ class EmployDetail extends Person {
             name = sc.nextLine().trim();
         }
 
-        // Get Emergency Contact Name
-        System.out.print("Enter " + name + "'s Emergency Contact's Name -: ");
-        emergencyContact_name = sc.nextLine().trim();
-        while (emergencyContact_name.isEmpty()) {
-            System.out.print("Emergency Contact's name cannot be empty. Enter " + name + "'s Emergency Contact's Name -: ");
-            emergencyContact_name = sc.nextLine().trim();
-        }
-
-        // Get Emergency Contact Number
-        System.out.print("Enter " + name + "'s Emergency Contact Number -: ");
-        emergencyContact_contact = sc.nextLine().trim();
-        while (emergencyContact_contact.isEmpty() || !emergencyContact_contact.matches("\\d{9}")) {
-            System.out.print("Emergency Contact number must be 9 digits. Enter " + name + "'s Emergency Contact Number -: ");
-            emergencyContact_contact = sc.nextLine().trim();
-        }
-
-        // Get Emergency Contact Address
-        System.out.print("Enter " + name + "'s Emergency Contact Address -: ");
-        emergencyContact_address = sc.nextLine().trim();
-        while (emergencyContact_address.isEmpty()) {
-            System.out.print("Emergency Contact address cannot be empty. Enter " + name + "'s Emergency Contact Address -: ");
-            emergencyContact_address = sc.nextLine().trim();
-        }
-
-        // Get Emergency Contact Email
-        System.out.print("Enter " + name + "'s Emergency Contact Email -: ");
-        emergencyContact_email = sc.nextLine().trim();
-        while (emergencyContact_email.isEmpty() || !emergencyContact_email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")) {
-            System.out.print("Invalid email format. Enter " + name + "'s Emergency Contact Email -: ");
-            emergencyContact_email = sc.nextLine().trim();
-        }
-
         // Get Employee ID
         System.out.print("Enter " + name + "'s ID ----------: ");
         employ_id = sc.nextLine().trim();
@@ -186,6 +154,40 @@ class EmployDetail extends Person {
                 System.out.print("Invalid salary. Enter a valid Salary ------: ");
             }
         }
+
+
+        // Get Emergency Contact Name
+        System.out.print("Enter " + name + "'s Emergency Contact's Name -: ");
+        emergencyContact_name = sc.nextLine().trim();
+        while (emergencyContact_name.isEmpty()) {
+            System.out.print("Emergency Contact's name cannot be empty. Enter " + name + "'s Emergency Contact's Name -: ");
+            emergencyContact_name = sc.nextLine().trim();
+        }
+
+        // Get Emergency Contact Number
+        System.out.print("Enter " + name + "'s Emergency Contact Number -: ");
+        emergencyContact_contact = sc.nextLine().trim();
+        while (emergencyContact_contact.isEmpty() || !emergencyContact_contact.matches("\\d{9}")) {
+            System.out.print("Emergency Contact number must be 9 digits. Enter " + name + "'s Emergency Contact Number -: ");
+            emergencyContact_contact = sc.nextLine().trim();
+        }
+
+        // Get Emergency Contact Address
+        System.out.print("Enter " + name + "'s Emergency Contact Address -: ");
+        emergencyContact_address = sc.nextLine().trim();
+        while (emergencyContact_address.isEmpty()) {
+            System.out.print("Emergency Contact address cannot be empty. Enter " + name + "'s Emergency Contact Address -: ");
+            emergencyContact_address = sc.nextLine().trim();
+        }
+
+        // Get Emergency Contact Email
+        System.out.print("Enter " + name + "'s Emergency Contact Email -: ");
+        emergencyContact_email = sc.nextLine().trim();
+        while (emergencyContact_email.isEmpty() || !emergencyContact_email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")) {
+            System.out.print("Invalid email format. Enter " + name + "'s Emergency Contact Email -: ");
+            emergencyContact_email = sc.nextLine().trim();
+        }
+
 
         // Generate Salary Summary
         SalaryCalculator salaryCalculator = new SalaryCalculator();
