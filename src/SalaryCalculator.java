@@ -6,7 +6,7 @@ public class SalaryCalculator extends SalaryMaths implements Calculations {
 
     public static void generateSalarySummary(String empID, SalaryMaths salaryMaths, double monthlySalary) throws IOException {
         // Ensure the directory exists
-        File directory = new File("./salarydata");
+        File directory = new File(FileFunctions.SALARY_DATA_DIR);
         if (!directory.exists()) {
             directory.mkdirs();
         }

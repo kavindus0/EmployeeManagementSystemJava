@@ -1,10 +1,10 @@
 import java.io.File;
 import java.io.IOException;
 
-public class EmployeeDataView implements FileFunctions{
+public class EmployeeDataView implements FileFunctions {
     @Override
     public void createFileBaseHTML() throws IOException {
-
+        // Not implemented
     }
 
     public void listUserdataFiles() {
@@ -17,8 +17,7 @@ public class EmployeeDataView implements FileFunctions{
                     int startIndex = fileName.indexOf("employee") + "employee".length();
                     int endIndex = fileName.indexOf(".html");
                     if (endIndex != -1 && startIndex < endIndex) {
-                        StringBuffer buffer = new StringBuffer(fileName);
-                        String extractedWord = buffer.substring(startIndex, endIndex);
+                        String extractedWord = fileName.substring(startIndex, endIndex);
                         System.out.println(" - " + extractedWord);
                     }
                 }
@@ -32,17 +31,16 @@ public class EmployeeDataView implements FileFunctions{
 
     @Override
     public void removeFile(String id) throws IOException {
-
+        // Not implemented
     }
 
     @Override
     public void viewFile(String id) throws IOException {
-
+        // Not implemented
     }
 
     @Override
     public void updateFile(String id, String oldData, String newData) throws IOException {
-
+        // Not implemented
     }
-
 }
