@@ -8,6 +8,9 @@ class Employee_Add implements FileFunctions{
         Scanner sc = new Scanner(System.in);
         EmployDetail emp = new EmployDetail();
         emp.getInfo();
+        EmergencyContactAddPage emrj= new  EmergencyContactAddPage(emp.getName(),emp.getEmploy_contact(),emp.getEmail(),emp.getEmploy_id());
+        emrj.createFileBaseHTML(emp);
+
 
         try {
             File f1 = new File("./userdata/employee" + emp.getEmploy_id() + ".html");

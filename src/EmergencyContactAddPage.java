@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class EmergencyContactAddPage extends EmergencyContact implements FileFunctions {
 
-    public EmergencyContactAddPage(String name, String contactNo, String email, String address) {
+    public EmergencyContactAddPage(String name, int contactNo, String email, String address) {
         super(name, contactNo, email, address);
     }
 
@@ -13,7 +13,7 @@ public class EmergencyContactAddPage extends EmergencyContact implements FileFun
     EmergencyContact emCon = new EmergencyContact(emp.getName(), emp.getEmploy_contact(), emp.getEmail(), emp.getAddress());
 
     // Method to create an HTML file for the emergency contact
-    public void createFileBaseHTML() throws IOException {
+    public void createFileBaseHTML(EmployDetail emp) throws IOException {
         try {
             // Create a new HTML file for the emergency contact
             File file = new File("./emergencydata/emergency_" +emCon.getName().replace(" ", "_") + ".html");
@@ -48,6 +48,11 @@ public class EmergencyContactAddPage extends EmergencyContact implements FileFun
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+    }
+
+    @Override
+    public void createFileBaseHTML() throws IOException {
+
     }
 
     // Override methods from FileFunctions interface (not used in this context)

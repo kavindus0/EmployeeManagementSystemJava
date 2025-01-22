@@ -1,22 +1,22 @@
 import java.io.IOException;
 import java.util.Scanner;
-class EmployDetail extends Person{
-   private String name;
-   private String email;
-   private String position;
-   private String Adress;
-   private String employ_id;
-   private double employ_salary;
-   private int employ_contact;
-   private String emergencyContact_name;
-   private String emergencyContact_contact;
-   private String emergencyContact_adress;
-   private String emergencyContact_email;
 
+class EmployDetail extends Person {
+    private String name;
+    private String email;
+    private String position;
+    private String address;
+    private String employ_id;
+    private double employ_salary;
+    private int employ_contact;
+    private String emergencyContact_name;
+    private String emergencyContact_contact;
+    private String emergencyContact_address;
+    private String emergencyContact_email;
 
-    public EmployDetail(String name, String contactNo, String email, String address, String emergencyContact_adress, String emergencyContact_contact, String emergencyContact_email, String emergencyContact_name) {
+    public EmployDetail(String name, String contactNo, String email, String address, String emergencyContact_address, String emergencyContact_contact, String emergencyContact_email, String emergencyContact_name) {
         super(name, contactNo, email, address);
-        this.emergencyContact_adress = emergencyContact_adress;
+        this.emergencyContact_address = emergencyContact_address;
         this.emergencyContact_contact = emergencyContact_contact;
         this.emergencyContact_email = emergencyContact_email;
         this.emergencyContact_name = emergencyContact_name;
@@ -24,17 +24,12 @@ class EmployDetail extends Person{
 
     public EmployDetail() {
         super();
-
-         this.emergencyContact_adress = emergencyContact_adress;
-        this.emergencyContact_contact = emergencyContact_contact;
-        this.emergencyContact_email = emergencyContact_email;
-        this.emergencyContact_name = emergencyContact_name;
     }
 
     @Override
     public String toString() {
         return "EmployDetail{" +
-                "Adress='" + Adress + '\'' +
+                "address='" + address + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", position='" + position + '\'' +
@@ -43,33 +38,15 @@ class EmployDetail extends Person{
                 ", employ_contact=" + employ_contact +
                 ", emergencyContact_name='" + emergencyContact_name + '\'' +
                 ", emergencyContact_contact='" + emergencyContact_contact + '\'' +
-                ", emergencyContact_adress='" + emergencyContact_adress + '\'' +
+                ", emergencyContact_address='" + emergencyContact_address + '\'' +
                 ", emergencyContact_email='" + emergencyContact_email + '\'' +
                 "} " + super.toString();
-    }
-
-    public EmployDetail(String s, int employContact, String name, Object address, String adress, String email, String emergencyContact_adress, String emergencyContact_contact, String emergencyContact_email, String emergencyContact_name, int employ_contact, String employ_id, double employ_salary, String name1, String position) {
-        super(s, employContact, name, address);
-        Adress = adress;
-        this.email = email;
-        this.emergencyContact_adress = emergencyContact_adress;
-        this.emergencyContact_contact = emergencyContact_contact;
-        this.emergencyContact_email = emergencyContact_email;
-        this.emergencyContact_name = emergencyContact_name;
-        this.employ_contact = employ_contact;
-        this.employ_id = employ_id;
-        this.employ_salary = employ_salary;
-        this.name = name1;
-        this.position = position;
-    }
-
-    public EmployDetail(String name, String contactNo, String email, String address) {
-        super(name, contactNo, email, address);
     }
 
     public double getSalary() {
         return employ_salary;
     }
+
     public String getEmail() {
         return email;
     }
@@ -82,8 +59,6 @@ class EmployDetail extends Person{
         return employ_id;
     }
 
-
-
     public String getName() {
         return name;
     }
@@ -92,13 +67,29 @@ class EmployDetail extends Person{
         return position;
     }
 
-    double getEmploy_salary(){
+    public double getEmploy_salary() {
         return employ_salary;
     }
-    void setEmploy_salary(double employ_salary){
+
+    public void setEmploy_salary(double employ_salary) {
         this.employ_salary = employ_salary;
     }
 
+    public String getEmergencyContact_name() {
+        return emergencyContact_name;
+    }
+
+    public String getEmergencyContact_contact() {
+        return emergencyContact_contact;
+    }
+
+    public String getEmergencyContact_address() {
+        return emergencyContact_address;
+    }
+
+    public String getEmergencyContact_email() {
+        return emergencyContact_email;
+    }
 
     @Override
     public void getInfo() throws IOException {
@@ -112,32 +103,35 @@ class EmployDetail extends Person{
             name = sc.nextLine().trim();
         }
 
-        // Get Father Name
+        // Get Emergency Contact Name
         System.out.print("Enter " + name + "'s Emergency Contact's Name -: ");
         emergencyContact_name = sc.nextLine().trim();
         while (emergencyContact_name.isEmpty()) {
-            System.out.print("Emergency Contact's name cannot be empty. Enter " + name + "Name -: ");
+            System.out.print("Emergency Contact's name cannot be empty. Enter " + name + "'s Emergency Contact's Name -: ");
             emergencyContact_name = sc.nextLine().trim();
         }
 
-          System.out.print("Enter " + name + "'s Emergency Contact -: ");
+        // Get Emergency Contact Number
+        System.out.print("Enter " + name + "'s Emergency Contact Number -: ");
         emergencyContact_contact = sc.nextLine().trim();
-        while (emergencyContact_contact.isEmpty()) {
-            System.out.print("Emergency Contact cannot be empty. Enter " + name + "Contact No -: ");
+        while (emergencyContact_contact.isEmpty() || !emergencyContact_contact.matches("\\d{9}")) {
+            System.out.print("Emergency Contact number must be 9 digits. Enter " + name + "'s Emergency Contact Number -: ");
             emergencyContact_contact = sc.nextLine().trim();
         }
 
-          System.out.print("Enter " + name + "'s Emergency Contact Adress-: ");
-        emergencyContact_adress = sc.nextLine().trim();
-        while (emergencyContact_adress.isEmpty()) {
-            System.out.print("Emergency Contact cannot be empty. Enter " + name + "Contact No -: ");
-            emergencyContact_adress = sc.nextLine().trim();
+        // Get Emergency Contact Address
+        System.out.print("Enter " + name + "'s Emergency Contact Address -: ");
+        emergencyContact_address = sc.nextLine().trim();
+        while (emergencyContact_address.isEmpty()) {
+            System.out.print("Emergency Contact address cannot be empty. Enter " + name + "'s Emergency Contact Address -: ");
+            emergencyContact_address = sc.nextLine().trim();
         }
 
-         System.out.print("Enter " + name + "'s Emergency Contact email-: ");
+        // Get Emergency Contact Email
+        System.out.print("Enter " + name + "'s Emergency Contact Email -: ");
         emergencyContact_email = sc.nextLine().trim();
-        while (emergencyContact_email.isEmpty()) {
-            System.out.print("Emergency Contact cannot be empty. Enter " + name + "Contact No -: ");
+        while (emergencyContact_email.isEmpty() || !emergencyContact_email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")) {
+            System.out.print("Invalid email format. Enter " + name + "'s Emergency Contact Email -: ");
             emergencyContact_email = sc.nextLine().trim();
         }
 
@@ -152,7 +146,7 @@ class EmployDetail extends Person{
         // Get Email
         System.out.print("Enter " + name + "'s Email ID ----: ");
         email = sc.nextLine().trim();
-        while (!email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")) {
+        while (email.isEmpty() || !email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")) {
             System.out.print("Invalid email format. Enter " + name + "'s Email ID ----: ");
             email = sc.nextLine().trim();
         }
@@ -193,11 +187,8 @@ class EmployDetail extends Person{
             }
         }
 
-
+        // Generate Salary Summary
         SalaryCalculator salaryCalculator = new SalaryCalculator();
-        SalaryCalculator.generateSalarySummary(employ_id,salaryCalculator, this.employ_salary);
-
-
-
+        SalaryCalculator.generateSalarySummary(employ_id, salaryCalculator, this.employ_salary);
     }
 }
