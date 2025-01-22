@@ -8,6 +8,7 @@ public class EntryPoint {
     private static final String SALARY_DATA_DIR = "./salarydata/";
 
     public static void main(String[] args) {
+
         // Create necessary directories and files
         createDirectories();
 
