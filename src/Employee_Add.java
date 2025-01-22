@@ -3,8 +3,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-class Employee_Add {
-    public void createFile() throws IOException {
+class Employee_Add implements FileFunctions{
+    public void createFileBaseHTML() throws IOException {
         Scanner sc = new Scanner(System.in);
         EmployDetail emp = new EmployDetail();
         emp.getInfo();
@@ -26,7 +26,7 @@ class Employee_Add {
                 writer.write("<p><strong>Name:</strong> <span class=\"fade-in\">" + emp.getName() + "</span></p>");
                 writer.write("<p><strong>Contact:</strong> <span class=\"fade-in\">" + emp.getEmploy_contact() + "</span></p>");
                 writer.write("<p><strong>Email:</strong> <span class=\"fade-in\">" + emp.getEmail() + "</span></p>");
-                writer.write("<p><strong>Father's Name:</strong> <span class=\"fade-in\">" + emp.getFather_name() + "</span></p>");
+               // writer.write("<p><strong>Father's Name:</strong> <span class=\"fade-in\">" + em() + "</span></p>");
                 writer.write("<p><strong>Position:</strong> <span class=\"fade-in\">" + emp.getPosition() + "</span></p>");
                 writer.write("<p><strong>Salary:</strong> <span class=\"fade-in\">" + emp.getEmploy_salary() + "</span></p>");
                 writer.write("</div>");
@@ -43,5 +43,25 @@ class Employee_Add {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    @Override
+    public void listUserdataFiles() throws IOException {
+
+    }
+
+    @Override
+    public void removeFile(String id) throws IOException {
+
+    }
+
+    @Override
+    public void viewFile(String id) throws IOException {
+
+    }
+
+    @Override
+    public void updateFile(String id, String oldData, String newData) throws IOException {
+
     }
 }

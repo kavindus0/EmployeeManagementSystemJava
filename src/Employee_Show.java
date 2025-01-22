@@ -3,13 +3,28 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-class Employee_Show {
+class Employee_Show implements FileFunctions {
 
     private static void openDirectory(File file) throws IOException {
         Desktop.getDesktop().open(file);
     }
 
-    public void viewFile(String id) throws Exception {
+    @Override
+    public void createFileBaseHTML() throws IOException {
+
+    }
+
+    @Override
+    public void listUserdataFiles() throws IOException {
+
+    }
+
+    @Override
+    public void removeFile(String id) throws IOException {
+
+    }
+
+    public void viewFile(String id) {
         File file = new File("./userdata/employee" + id + ".html");
 
         if (file.exists()) while (true) {
@@ -22,6 +37,11 @@ class Employee_Show {
         else {
             System.out.println("Employee record not found.");
         }
+    }
+
+    @Override
+    public void updateFile(String id, String oldData, String newData) throws IOException {
+
     }
 }
 

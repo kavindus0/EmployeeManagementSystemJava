@@ -1,5 +1,12 @@
 import java.io.File;
-public class EmployeeDataView {
+import java.io.IOException;
+
+public class EmployeeDataView implements FileFunctions{
+    @Override
+    public void createFileBaseHTML() throws IOException {
+
+    }
+
     public void listUserdataFiles() {
         System.out.println("\nList of Employee IDs EXIST\n");
         File userdataDir = new File("userdata");
@@ -21,6 +28,21 @@ public class EmployeeDataView {
         } else {
             System.out.println("The directory does not exist.");
         }
+    }
+
+    @Override
+    public void removeFile(String id) throws IOException {
+
+    }
+
+    @Override
+    public void viewFile(String id) throws IOException {
+
+    }
+
+    @Override
+    public void updateFile(String id, String oldData, String newData) throws IOException {
+
     }
 
 }

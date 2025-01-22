@@ -5,7 +5,27 @@ import java.io.IOException;
 import java.util.Scanner;
 
 
-class Employee_Update {
+class Employee_Update implements FileFunctions {
+    @Override
+    public void createFileBaseHTML() throws IOException {
+
+    }
+
+    @Override
+    public void listUserdataFiles() throws IOException {
+
+    }
+
+    @Override
+    public void removeFile(String id) throws IOException {
+
+    }
+
+    @Override
+    public void viewFile(String id) throws IOException {
+
+    }
+
     public void updateFile(String id, String oldData, String newData) {
         try {
             File file = new File("employee" + id + ".html");
