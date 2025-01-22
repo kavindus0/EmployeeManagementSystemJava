@@ -24,9 +24,9 @@ class Employee_Add {
                 writer.write("<div class=\"details\">");
                 writer.write("<p><strong>Employee ID:</strong> <span class=\"fade-in\">" + emp.getEmploy_id() + "</span></p>");
                 writer.write("<p><strong>Name:</strong> <span class=\"fade-in\">" + emp.getName() + "</span></p>");
-                writer.write("<p><strong>Father's Name:</strong> <span class=\"fade-in\">" + emp.getFather_name() + "</span></p>");
                 writer.write("<p><strong>Contact:</strong> <span class=\"fade-in\">" + emp.getEmploy_contact() + "</span></p>");
                 writer.write("<p><strong>Email:</strong> <span class=\"fade-in\">" + emp.getEmail() + "</span></p>");
+                writer.write("<p><strong>Father's Name:</strong> <span class=\"fade-in\">" + emp.getFather_name() + "</span></p>");
                 writer.write("<p><strong>Position:</strong> <span class=\"fade-in\">" + emp.getPosition() + "</span></p>");
                 writer.write("<p><strong>Salary:</strong> <span class=\"fade-in\">" + emp.getEmploy_salary() + "</span></p>");
                 writer.write("</div>");
