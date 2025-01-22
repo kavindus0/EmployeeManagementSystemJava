@@ -1,6 +1,6 @@
 import java.io.IOException;
 import java.util.Scanner;
-class EmployDetail {
+class EmployDetail extends Person{
    private String name;
    private String father_name;
    private String email;
@@ -9,12 +9,27 @@ class EmployDetail {
     private double employ_salary;
    private int employ_contact;
 
-    public EmployDetail(String employ_id, double employ_salary) {
+    public EmployDetail(String employ_id, double employ_salary,String name) {
+        super(name);
         this.employ_id = employ_id;
         this.employ_salary = employ_salary;
     }
 
+    @Override
+    public String toString() {
+        return "EmployDetail{" +
+                "email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", father_name='" + father_name + '\'' +
+                ", position='" + position + '\'' +
+                ", employ_id='" + employ_id + '\'' +
+                ", employ_salary=" + employ_salary +
+                ", employ_contact=" + employ_contact +
+                "} ";
+    }
+
     public EmployDetail(String email, int employ_contact, String employ_id, double employ_salary, String father_name, String name, String position) {
+        super(name);
         this.email = email;
         this.employ_contact = employ_contact;
         this.employ_id = employ_id;
@@ -25,7 +40,7 @@ class EmployDetail {
     }
 
     public EmployDetail() {
-
+        super("");
     }
 
 
@@ -63,6 +78,8 @@ class EmployDetail {
         this.employ_salary = employ_salary;
     }
 
+
+    @Override
     public void getInfo() throws IOException {
         Scanner sc = new Scanner(System.in);
 
