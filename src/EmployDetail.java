@@ -24,6 +24,7 @@ class EmployDetail extends Person{
 
     public EmployDetail() {
         super();
+
          this.emergencyContact_adress = emergencyContact_adress;
         this.emergencyContact_contact = emergencyContact_contact;
         this.emergencyContact_email = emergencyContact_email;
