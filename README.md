@@ -32,8 +32,6 @@ Person <<Abstract>>
 └── EmergencyContact
 ```
 
-![class-hierarchy](https://github.com/user-attachments/assets/9c7de4fe-d525-48fe-9dbf-81a8bc4f356f)
-
 ### Interface Implementations
 - FileFunctions (Interface)
 - Calculations (Interface)
