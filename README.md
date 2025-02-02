@@ -1,4 +1,4 @@
-![class-hierarchy](https://github.com/user-attachments/assets/9c7de4fe-d525-48fe-9dbf-81a8bc4f356f)# Employee Management System (EMS)
+# Employee Management System (EMS)
 
 A user-friendly and efficient Java-based solution designed to help small and medium-sized businesses manage their employee records with ease. The system uses HTML-based file storage for maintaining employee records in a neat and organized way.
 
@@ -31,6 +31,9 @@ Person <<Abstract>>
 ├── EmployDetail
 └── EmergencyContact
 ```
+
+![class-hierarchy](https://github.com/user-attachments/assets/9c7de4fe-d525-48fe-9dbf-81a8bc4f356f)
+
 ![Uploading cl<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
   <!-- Abstract Person Class -->
   <rect x="240" y="20" width="120" height="50" fill="#e6e6e6" stroke="#333" rx="5"/>
