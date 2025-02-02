@@ -1,4 +1,4 @@
-# Employee Management System (EMS)
+![class-hierarchy](https://github.com/user-attachments/assets/9c7de4fe-d525-48fe-9dbf-81a8bc4f356f)# Employee Management System (EMS)
 
 A user-friendly and efficient Java-based solution designed to help small and medium-sized businesses manage their employee records with ease. The system uses HTML-based file storage for maintaining employee records in a neat and organized way.
 
@@ -31,6 +31,37 @@ Person <<Abstract>>
 ├── EmployDetail
 └── EmergencyContact
 ```
+![Uploading cl<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Abstract Person Class -->
+  <rect x="240" y="20" width="120" height="50" fill="#e6e6e6" stroke="#333" rx="5"/>
+  <text x="300" y="45" text-anchor="middle" font-family="Arial" font-size="14">Person</text>
+  <text x="300" y="60" text-anchor="middle" font-family="Arial" font-size="12" font-style="italic">&lt;&lt;Abstract&gt;&gt;</text>
+  
+  <!-- Child Classes -->
+  <rect x="80" y="150" width="120" height="40" fill="#fff" stroke="#333" rx="5"/>
+  <text x="140" y="175" text-anchor="middle" font-family="Arial" font-size="14">User</text>
+  
+  <rect x="240" y="150" width="120" height="40" fill="#fff" stroke="#333" rx="5"/>
+  <text x="300" y="175" text-anchor="middle" font-family="Arial" font-size="14">EmployDetail</text>
+  
+  <rect x="400" y="150" width="120" height="40" fill="#fff" stroke="#333" rx="5"/>
+  <text x="460" y="175" text-anchor="middle" font-family="Arial" font-size="14">EmergencyContact</text>
+  
+  <!-- Connecting Lines -->
+  <line x1="300" y1="70" x2="140" y2="150" stroke="#333" marker-end="url(#arrowhead)"/>
+  <line x1="300" y1="70" x2="300" y2="150" stroke="#333" marker-end="url(#arrowhead)"/>
+  <line x1="300" y1="70" x2="460" y2="150" stroke="#333" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+ass-hierarchy.svg…]()
+
+
 
 ### Interface Implementations
 - FileFunctions (Interface)
